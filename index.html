@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يسر الشحن مع راحة البال</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; 
+            color: #fff; 
+            text-align: center; 
+        }
+        .content {
+            max-width: 75%; 
+            padding: 20px;
+            background-color: #333; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); 
+            margin: 0 auto; 
+            position: relative; 
+            top: 0; 
+        }
+        h1 {
+            margin-bottom: 20px; 
+        }
+        h2 {
+            margin-top: 30px; 
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 30px; 
+        }
+        .image-container {
+            margin-bottom: 40px; 
+            display: inline-block; 
+            width: 45%; 
+            margin: 10px;
+            vertical-align: top; 
+        }
+        .image-container img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+        }
+        .button {
+            background-color: #007BFF; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3; 
+        }
+        .slider {
+            margin-top: 200px; 
+            position: relative; 
+            width: 100%;
+            height: 600px; 
+            overflow: hidden; 
+            border-radius: 8px; 
+        }
+        .slider img {
+            width: 100%; 
+            height: 100%;
+            position: absolute; 
+            top: 0; 
+            left: 100%; 
+            transition: left 0.5s ease; 
+        }
+        .slider img.active {
+            left: 0; 
+        }
+        .final-image {
+            display: flex; 
+            justify-content: flex-end; 
+            align-items: center;
+            margin-top: 40px;
+        }
+        .final-image img {
+            width: 200%; 
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        .final-image p {
+            max-width: 100%;
+            margin: 0;
+        }
+        .battery-info {
+            display: flex; 
+            align-items: center; 
+            margin-top: 200px;
+        }
+        .battery-info img {
+            width: 200%; 
+            border-radius: 8px; 
+            margin-right: 20px; 
+        }
+        #chargeTimeText {
+            display: none; 
+            margin-top: 20px;
+            font-size: 1.2em; 
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>يسر الشحن مع راحة البال</h1>
+        <p>بكل بساطة، في أي وقت وأي مكان. تبشر السيارات الكهربائية والسيارات الهجين بنوع جديد من إمكانات التنقل التي تتميز بالكفاءة وتوفير الراحة والبساطة. بفضل خيارات الشحن المرنة وتقنيات الشحن المبتكرة، أصبح اليوم يمكنك قيادة سيارتك في رحلات سفر أطول من دون الانشغال بالتحضير الطويل المسبق لذلك. الشحن السريع أثناء القيادة على الطريق أو الشحن في أجواء مريحة بالمنزل. اكتشف أفضل حلول الشحن التي تلائم نمط حياتك.</p>
+        
+        <h2>حلول شحن سيارتك الكهربائية</h2>
+        
+        <div class="image-container">
+            <img src="Screenshot 2024-12-17 223227.png" alt="صورة 1">
+            <h4>الشحن أثناء السير على الطرق.</h4>
+            <p>بفضل حلول الشحن الشاملة لدينا، ستجد دوماً حلولاً ملائمة لشحن سيارتك الكهربائية أو الهجين بالقرب منك.</p>
+            <a href="#" class="button">اكتشف المزيد</a>
+        </div>
+        <div class="image-container">
+            <img src="Screenshot 2024-12-17 223332.png" alt="صورة 2">
+            <h4>الشحن في المنزل.</h4>
+            <p>بغض النظر عن الأمر، ستتمكن في كل الأحوال من شحن سيارتك الكهربائية أو السيارة الهجين التي تُشحن من مقبس خارجي بأسلوب يسير ومريح في المنزل. استمتع بيسر الشحن ومعدل سرعة الشحن الذي تحدده باستخدام صندوق الشحن الجداري BMW Wallbox أو شاحن BMW المرن السريع عبر منفذ قدرة عالٍ أو مقبس محلي. اكتشف المزيد عن الحلول العملية التي تقدمها BMW لشحن سيارتك الكهربائية في المنزل.</p>
+            <a href="#" class="button">اكتشف المزيد</a>
+        </div>
+        
+        <div class="slider">
+            <img src="Screenshot 2024-12-17 223145.png" alt="سيارات كهربائية" class="active">
+            <img src="Screenshot 2024-12-17 223050.png" alt="سيارات هجين">
+        </div>
+    
+    
+        
+        <select id="carType" onchange="changeImage()">
+            <option value="electric">السيارات الكهربائية</option>
+            <option value="hybrid">السيارات الهجين التي تشحن من مقبس خارجي</option>
+        </select>
+
+            </div>
+        </div>
+        <div>
+            <h1>تتولى سيارتك BMW أداء معظم الأعمال لتوفر لك وقتاً للراحة والاستمتاع</h1>
+            <div class="image-container">
+                <img src="Screenshot 2024-12-17 223359.png" alt="صورة 1">
+                <h4>مخطط المسارات في السيارات الكهربائية</h4>
+                <p>بفضل نظام التحديد التلقائي لأفضل أماكن التوقف الإضافية للشحن، يمكنك التخطيط للسفر مع راحة البال، فنظام مخطط المسارات يتم تكييف أدائه وفقا لتفضيلاتك واحتياجاتك الشخصية، يوفر مخطط المسارات، المدمج في نظام الملاحة BMW ، خيارات محددة للسيارات الكهربائية، وتحديداً من خلال تحديده مواقع محطات الشحن على طول مسار الرحلة.</p>
+                <a href="#" class="button">اكتشف المزيد</a>
+            </div>
+             <div class="image-container">
+                <img src="Screenshot 2024-12-17 223431.png" alt="صورة 2">
+                <h4>إعدادات الشحن المفضلة</h4>
+                <p>تعمل إعدادات الشحن في سيارتك على تكييف إعدادات عملية الشحن مع الوضع المحلي أو وفقا لتفضيلاتك الشخصية. اشحن ما يصل إلى 80% من سعة البطارية لحمايتها وتحسين أداء شحنها.</p>
+                <a href="#" class="button">اكتشف المزيد</a>
+            </div>
+            <div>
+        </div>
+        <div>
+            <h1>أوقات شحن السيارات الكهربائية.</h1>
+            <p>إن أسرع وسيلة للشحن هي شحن سيارتك الكهربائية في محطات الشحن العالية القدرة. بفضل قدرة الشحن العالية في هذه المحطات تجدها تخفض أوقات الشحن إلى حدها الأدنى. فعلى سبيل المثال، تحتاج سيارة BMW i5 إلى الشحن لمدة 10 دقائق فقط لتقطع مدى مسافة كهربائي بالكامل ما بين 146 إلى 196 كيلومتراً. مع صندوق الشحن الجداري BMW Wallbox أو شاحن BMW السريع المرن، يمكنك شحن سيارتك BMW i5 بالكامل بكل يسر وسهولة في المنزل خلال 8 ساعات ونصف الساعة.
+    
+                *قد تكون محطات الشحن بقدرة 350 ك.و غير متاحة في كل الأسواق</p>
+    
+        </div>
+        <div>
+            <h1>كم تحتاج السيارة الكهربائية إلى كهرباء لتسييرها.</h1>
+            <p>يعتمد استهلاك القدرة لشحن السيارة الكهربائية على عوامل مختلفة. ومع ذلك، فإن سلوكك في القيادة ومتوسط السرعة ودرجة الحرارة الخارجية لها أيضاً دور في ذلك. تعتمد تكاليف قدرة الشحن الشهرية، قبل كل شيء، على مدى المسافة المقطوعة ومعدلات الاستهلاك للسيارة الكهربائية. ويؤثر في ذلك أيضاً أسلوبك في قيادة السيارة. علاوة على ذلك، تعد تعرفة الشحن المحددة ومواقع الشحن أيضاً من المكونات الرئيسية في عناصر تكلفة الكهرباء.
+    
+            </p>
+       
+    
+    <script>
+        function changeImage() {
+            const sliderImages = document.querySelectorAll('.slider img');
+            const selectedValue = document.getElementById('carType').value;
+
+            sliderImages.forEach((img, index) => {
+                img.classList.remove('active');
+                if (selectedValue === 'electric' && index === 0) {
+                    img.classList.add('active');
+ } else if (selectedValue === 'hybrid' && index === 1) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        document.getElementById('chargeTimeButton').onclick = function() {
+            var text = document.getElementById('chargeTimeText');
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        };
+    </script>
+    
+    <div class="final-image">
+        <div>
+            <h3>شبكة الشحن الممتدة المخصصة لخدمتك</h3> 
+            <p>تهدف خدمة وجْهات الشحن BMW Destination Charging إلى توسيع خيارات الشحن المتاحة لعملائنا. حيث نوفر لهم عدداً كبيراً من نقاط شحن سياراتهم في 50 بلداً. يمكنك تحقيق أقصى استفادة من خيارات الشحن الحصرية هذه في وجهتك، وذلك بفضل العديد من الشركاء المتميزين المشاركين، مثل الفنادق والمطاعم ونوادي الجولف وما إلى ذلك. وبين ما تستمتع بإقامتك، يتم شحن سيارة BMW الخاصة بك. يمكنك العثور بسهولة على خيار الشحن المتميز باستخدام نظام الملاحة الخاص بك أو تطبيق My BMW الخاص بك. كن جزءًا من شبكة الشحن العالمية بالتواصل مع  <link  Saad.Shaikh@bmw.com></p>
+        </div>
+        <img src="Screenshot 2024-12-17 223504.png" alt="صورة 2">
+    </div>
+    
+    <div class="battery-info">
+        <img src="Screenshot 2024-12-17 230516.png" alt="بطارية">
+        <div>
+            <h3>تحسين العمر التشغيلي لبطارية سيارتك الكهربائية</h3>
+            <p>إن عادات استخدامك لسيارتك الكهربائية لها تأثير على العمر التشغيلي للبطاريات العالية الجهد في هذه السيارات. يجب أن يتم وبشكل أساسي شحن بطاريتك العالية الجهد بقدرات شحن منخفضة في محطات شحن بالتيار المتردد أو باستخدام صندوق الشحن الجداري. ففي حالات الاستخدام العام، من المنطقي تشغيل سيارتك بشحن بطارية يتراوح بين 10% و80% وهنا يمكنك التحديد المسبق لمستهدف الشحن على 80%. كما أن أسلوب القيادة الفعال والاستباقي يعزز مدى المسافة التي يمكن أن تقطعها البطارية ويحسّن معدلات عمرها التشغيلي.</p>
+            <a href="#" class="button">اكتشف المزيد</a>
+        </div>
+    </div>
+    
+</body>	
+</html>
+
